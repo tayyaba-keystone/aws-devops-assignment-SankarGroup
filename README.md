@@ -1,245 +1,167 @@
-sudo apt install nginx -y
-df -h
-ps -ef
-git init
-git add .
-git commit -m "Initial Commit"
-git push -u origin main
-```
+<img width="975" height="270" alt="image" src="https://github.com/user-attachments/assets/fc15e9e5-f677-4442-b63c-081edd1fc851" /># AWS DevOps Engineer Internship Assignment
+
+## Candidate Details
+
+* **Name:** Tayyaba Bagwan
+* **College:** Savitribai Phule Pune University (SPPU)
+* **Branch:** Computer Engineering
 
 ---
 
-# Problems Faced
+# Project Overview
 
-- SSH connection issues due to incorrect key permissions.
-- Website was not accessible until HTTP (Port 80) was allowed in the Security Group.
-- Required `sudo` permission to edit files in `/var/www/html`.
+This project demonstrates the deployment of a static website on an AWS EC2 Ubuntu instance using Nginx. It also covers Linux administration, Git & GitHub, and a shell script to automate restarting the Nginx service.
 
 ---
 
-# Learnings
+# AWS Services Used
 
-- Launching and managing AWS EC2 instances.
-- Configuring Security Groups.
-- Connecting to Linux servers using SSH.
-- Installing and managing Nginx.
-- Hosting a static website on AWS.
-- Using Git and GitHub for version control.
+* Amazon EC2
+* Security Group
+* Key Pair
+* Public IPv4 Address
+
+---
+
+# Technologies Used
+
+* AWS EC2
+* Ubuntu Linux
+* Nginx
+* HTML
+* Git
+* GitHub
+* Bash Shell Script
 
 ---
 
 # Project Structure
 
-```
+```text
 aws-devops-assignment/
 │── index.html
+│── restart_nginx.sh
 │── README.md
 └── screenshots/
-    ├── SS1_EC2_Dashboard.png
-    ├── SS2_SSH_Login.png
-    ├── SS3_Nginx_Installed.png
-    ├── SS4_Nginx_Status.png
-    ├── SS5_Nginx_Website.png
-    ├── SS6_Custom_Website.png
-    └── SS7_GitHub_Repository.png
+```
+
+---
+
+# Task 1 – EC2 Instance Setup
+
+* Created an Ubuntu EC2 instance.
+* Configured Security Group.
+* Allowed SSH (22) and HTTP (80).
+* Connected to the instance using SSH.
+
+### EC2 Dashboard
+
+<img width="975" height="403" alt="Image" src="https://github.com/user-attachments/assets/12b741ee-6fd5-4b38-994a-4aec5bca1069" />
+
+### SSH Login
+
+<img width="975" height="544" alt="Image" src="https://github.com/user-attachments/assets/18272d19-c716-4511-8797-35d4f6dbe5b1" />
+
+---
+
+# Task 2 – Linux Basics
+
+* Updated Ubuntu packages.
+* Installed Nginx.
+* Checked Nginx status.
+* Restarted the Nginx service.
+* Checked disk usage, memory usage, and running processes.
+
+### Nginx Installed
+
+<img width="975" height="550" alt="Image" src="https://github.com/user-attachments/assets/5887fa5e-1f40-45da-aff3-b44da92f8869" />
+
+### Nginx Running
+
+<img width="975" height="312" alt="Image" src="https://github.com/user-attachments/assets/26260699-0727-4353-bbd1-50e154b1f96e" />
+
+### Default Nginx Website
+
+<img width="975" height="270" alt="Image" src="https://github.com/user-attachments/assets/7e342be3-6677-4304-8299-bcd4a00165e4" />
+
+---
+
+# Task 3 – Website Deployment
+
+* Created a custom HTML webpage.
+* Replaced the default Nginx page.
+* Hosted the website using the EC2 Public IP.
+
+### Custom Website
+
+<img width="936" height="444" alt="Image" src="https://github.com/user-attachments/assets/6707cdf3-f2ff-4318-8aee-97e365606061" />
+
+---
+
+# Task 4 – Git & GitHub
+
+* Initialized a Git repository.
+* Added project files.
+* Committed changes.
+* Pushed the project to GitHub.
+
+### GitHub Repository
+
+<img width="1366" height="481" alt="Image" src="https://github.com/user-attachments/assets/89f5e28b-88fc-40d4-895e-8c63e7c111b3" />
+
+---
+
+# Bonus Task – Shell Script
+
+Created a shell script to restart the Nginx service automatically.
+
+### Shell Script
+
+<img width="975" height="170" alt="Image" src="https://github.com/user-attachments/assets/371470b1-5115-4020-aae4-5fe2998eb043" />
+
+### Script Output
+
+<img width="975" height="344" alt="Image" src="https://github.com/user-attachments/assets/a251ad3b-6bc2-4c4e-b222-359c951434ad" />
+
+---
+
+# Common Commands
+
+```bash
+sudo apt update
+sudo apt install nginx -y
+sudo systemctl status nginx
+sudo systemctl restart nginx
+df -h
+free -h
+ps -ef
+
+git init
+git add .
+git commit -m "Initial Commit"
+git push -u origin main
 ```
 
 ---
 
 # Result
 
-Successfully launched an AWS EC2 Ubuntu instance, installed and configured Nginx, hosted a custom HTML website, and uploaded the project to GitHub with complete documentationfree -h
-sudo systemctl restart nginx
-sudo systemctl enable nginx
-sudo systemctl status nginx
-sudo apt update
-sudo apt upgrade -y
-
-```bash
-
-# Linux Commands Used
-# AWS DevOps Engineer Internship Assignment
-
-
----
-## Candidate Details
-
-- **Name:** Tayyaba Bagwan
-- **College:** Savitribai Phule Pune University (SPPU)
-- **Branch:** Computer Engineering
-- **Email:** your-email@example.com
-- **Date:** 10 July 2026
+* Successfully deployed a static website on AWS EC2.
+* Configured and managed Nginx.
+* Uploaded the project to GitHub.
+* Automated Nginx restart using a shell script.
 
 ---
 
-# Assignment Objective
+# Repository Contents
 
-
-![GitHub Repository](screenshots/SS7_GitHub_Repository.png)
-Deploy a simple website on an AWS EC2 Ubuntu instance using Nginx and document the complete process.
-
----
-
-# AWS Services Used
-
-### GitHub Repository
-
-- Amazon EC2
-- Security Group
+* `index.html`
+* `restart_nginx.sh`
+* `README.md`
+* `screenshots/`
 
 ---
 
-# Task 1: Create an AWS EC2 Instance
+# Author
 
-## Steps Performed
-
-1. Logged in to the AWS Management Console.
-2. Opened the EC2 Dashboard.
-3. Launched an Ubuntu EC2 instance.
-4. Selected the t2.micro instance type.
-5. Created a new key pair.
-6. Created a Security Group.
-7. Allowed SSH (Port 22) from My IP.
-8. Allowed HTTP (Port 80) from Anywhere.
-9. Launched the instance successfully.
-10. Connected to the instance using SSH.
-
-
-## Screenshot
-### SSH Command
-
-```bash
-ssh -i devops-key.pem ubuntu@YOUR_PUBLIC_IP
-```
-
-## Screenshots
-
-### EC2 Dashboard
-
-![EC2 Dashboard](screenshots/SS1_EC2_Dashboard.png)
-git push -u origin main
-```
-
-### SSH Login
-
-![SSH Login](screenshots/SS2_SSH_Login.png)
-
----
-
-# Task 2: Linux Basics
-
-## Updated Ubuntu Packages
-
-```bash
-sudo apt update
-sudo apt upgrade -y
-```
-
-## Installed Nginx
-
-```bash
-sudo apt install nginx -y
-```
-
-
-## Checked Nginx Status
-
-```bash
-sudo systemctl status nginx
-```
-git remote add origin https://github.com/YOUR_USERNAME/aws-devops-assignment.git
-
-## Restarted Nginx
-
-```bash
-sudo systemctl restart nginx
-```
-
-## Checked Disk Usage
-
-```bash
-df -h
-```
-
-## Checked Memory Usage
-
-```bash
-
-free -h
-```
-
-## Checked Running Processes
-
-```bash
-ps -ef
-```
-
-## Screenshots
-
-git branch -M main
-### Nginx Installed
-
-![Nginx Installed](screenshots/SS3_Nginx_Installed.png)
-
-### Nginx Running
-
-![Nginx Running](screenshots/SS4_Nginx_Status.png)
-
-### Website Accessible
-
-![Website Accessible](screenshots/SS5_Nginx_Website.png)
-git commit -m "Initial Commit"
-
-
----
-
-# Task 3: Host a Simple Website
-
-## Steps Performed
-
-1. Removed the default Nginx page.
-2. Created a new `index.html` file.
-3. Added personal details:
-   - Name
-   - College
-
-   - Branch
-   - Email
-   - Current Date
-4. Saved the file.
-5. Restarted the Nginx service.
-6. Verified the website using the EC2 Public IP.
-
-## Commands Used
-
-```bash
-git add .
-cd /var/www/html
-
-sudo rm index.nginx-debian.html
-
-sudo nano index.html
-
-sudo systemctl restart nginx
-```
-git init
-
-
-## Screenshot
-
-### Custom Website
-
-![Custom Website](screenshots/SS6_Custom_Website.png)
-
----
-
-```bash
-# Task 4: Git & GitHub
-
-## Steps Performed
-
-1. Initialized a Git repository.
-2. Added project files.
-3. Committed the changes.
-4. Created a GitHub repository.
-
+**Tayyaba Bagwan**
