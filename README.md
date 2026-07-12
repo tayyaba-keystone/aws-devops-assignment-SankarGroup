@@ -1,4 +1,4 @@
-<img width="975" height="270" alt="image" src="https://github.com/user-attachments/assets/fc15e9e5-f677-4442-b63c-081edd1fc851" /># AWS DevOps Engineer Internship Assignment
+# AWS DevOps Engineer Internship Assignment
 
 ## Candidate Details
 
